@@ -1,8 +1,9 @@
 import wandb
+from sys import argv
 
 api = wandb.Api()
 
-runs = api.runs("shivamshrirao/3d_attn_aug_res_unet")
+runs = api.runs("shivamshrirao/"+argv[1])
 
 for run in runs:
     history = run.history()
